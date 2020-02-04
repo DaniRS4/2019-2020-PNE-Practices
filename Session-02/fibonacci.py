@@ -1,3 +1,4 @@
+# Fibonacci exercise
 
 a = 0
 b = 1
