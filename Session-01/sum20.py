@@ -7,6 +7,6 @@
 res = 0
 
 for i in range (1, 21):
-    res += 1
+    res += i
 
 print("The total sum is: ", res)
