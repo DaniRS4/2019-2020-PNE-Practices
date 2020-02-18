@@ -1,3 +1,6 @@
+from pathlib import Path
+
+
 def seq_ping():
     print("OK!")
 
@@ -8,5 +11,4 @@ def seq_read_fasta(filename):
     lines = file_contents.split('\n')
     body = lines[1:]
     bodystr = bodystr.join(body).replace(" ", "")
-    return (bodystr[0:20])
-
+    return bodystr[0:20]
