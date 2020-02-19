@@ -37,36 +37,34 @@ def seq_count_base(seq, base):
 
 
 def seq_count(seq):
-    FOLDER = "/home/alumnos/joseepp/PycharmProjects/2019-2020-PNE-Practices/Session-04/"
-    FILENAME = ["U5", "ADA", "FRAT1", "FXN", "U5"]
-    BASES = ["A", "T", "C", "G"]
     file_contents = Path(seq).read_text()
     seq = ""
     lines = file_contents.split('\n')
     body = lines[1:]
     seq = seq.join(body).replace(" ", "")
-    countA = 0
-    countT = 0
-    countC = 0
-    countG = 0
+    BASE = ['A', 'C', 'T', 'G']
+    counterA = 0
+    counterT = 0
+    counterC = 0
+    counterG = 0
     countlist = []
     for i in seq:
         if i == "A":
-            countA = countA + 1
+            counterA = counterA + 1
         elif i == "T":
-            countT = countT + 1
+            counterT = counterT + 1
         elif i == "C":
-            countC = countC + 1
+            counterC = counterC + 1
         elif i == "G":
-            countG = countG + 1
+            counterG = counterG + 1
         else:
             next
-    countlist.append(countA)
-    countlist.append(countT)
-    countlist.append(countC)
-    countlist.append(countG)
-    for i in countlist:
-        basesdict = dict(zip(BASES, countlist))
+    countlist.append(counterA)
+    countlist.append(counterT)
+    countlist.append(counterC)
+    countlist.append(counterG)
+
+    basesdict = dict(zip(BASE, countlist))
     return (basesdict)
 
 
