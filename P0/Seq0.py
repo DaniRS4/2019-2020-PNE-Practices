@@ -11,7 +11,7 @@ def seq_read_fasta(filename):
     lines = file_contents.split('\n')
     body = lines[1:]
     bodystr = bodystr.join(body).replace(" ", "")
-    return (bodystr[0:20])
+    return bodystr[0:20]
 
 
 def seq_len(seq):
@@ -20,7 +20,7 @@ def seq_len(seq):
     lines = file_contents.split('\n')
     body = lines[1:]
     bodystr = bodystr.join(body).replace(" ", "")
-    return (len(bodystr))
+    return len(bodystr)
 
 
 def seq_count_base(seq, base):
@@ -33,7 +33,7 @@ def seq_count_base(seq, base):
     for i in seq:
         if i == base:
             count += 1
-    return (count)
+    return count
 
 
 def seq_count(seq):
