@@ -42,30 +42,30 @@ def seq_count(seq):
     lines = file_contents.split('\n')
     body = lines[1:]
     seq = seq.join(body).replace(" ", "")
-    BASE = ['A', 'C', 'T', 'G']
-    counterA = 0
-    counterT = 0
-    counterC = 0
-    counterG = 0
+    base = ['A', 'C', 'T', 'G']
+    counter_a = 0
+    counter_t = 0
+    counter_c = 0
+    counter_g = 0
     countlist = []
     for i in seq:
         if i == "A":
-            counterA = counterA + 1
+            counter_a = counter_a + 1
         elif i == "T":
-            counterT = counterT + 1
+            counter_t = counter_t + 1
         elif i == "C":
-            counterC = counterC + 1
+            counter_c = counter_c + 1
         elif i == "G":
-            counterG = counterG + 1
+            counter_g = counter_g + 1
         else:
-            next
-    countlist.append(counterA)
-    countlist.append(counterT)
-    countlist.append(counterC)
-    countlist.append(counterG)
+            continue
+    countlist.append(counter_a)
+    countlist.append(counter_t)
+    countlist.append(counter_c)
+    countlist.append(counter_g)
 
-    basesdict = dict(zip(BASE, countlist))
-    return (basesdict)
+    basesdict = dict(zip(base, countlist))
+    return basesdict
 
 
 def seq_reverse(filename):
@@ -76,20 +76,25 @@ def seq_reverse(filename):
     bodystr = bodystr.join(body).replace(" ", "")
     first20 = bodystr[0:20]
     first20reverse = first20[::-1]
-    return (first20, first20reverse)
+    return first20, first20reverse
 
 
-def seq_complement(seq):
-    comp = ""
-    for i in seq:
+def seq_complement(filename):
+    bodystr = ""
+    file_contents = Path(filename).read_text()
+    lines = file_contents.split('\n')
+    body = lines[1:]
+    bodystr = bodystr.join(body).replace(" ", "")
+    complement = ""
+    for i in bodystr:
         if i == "A":
-            comp = comp + "T"
+            complement = complement + "T"
         elif i == "C":
-            comp = comp + "G"
+            complement = complement + "G"
         elif i == "G":
-            comp = comp + "C"
+            complement = complement + "C"
         elif i == "T":
-            comp = comp + "A"
+            complement = complement + "A"
         else:
-            next
-    return comp
+            continue
+    return bodystr, complement
