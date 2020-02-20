@@ -75,8 +75,8 @@ def seq_reverse(filename):
     body = lines[1:]
     bodystr = bodystr.join(body).replace(" ", "")
     first20 = bodystr[0:20]
-    first20reverb = first20[::-1]
-    return (first20, first20reverb)
+    first20reverse = first20[::-1]
+    return (first20, first20reverse)
 
 
 def seq_complement(seq):

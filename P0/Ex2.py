@@ -6,6 +6,6 @@ FILENAME = "U5.txt"
 DNAFILE = FOLDER + FILENAME
 
 print(DNAFILE)
-
+print("-----| Exercise 2 |------")
 print("DNA file: ", FILENAME)
 print("The first 20 bases are: ", seq_read_fasta(DNAFILE))

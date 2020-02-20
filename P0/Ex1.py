@@ -1,4 +1,4 @@
 from Seq0 import *
-
-print("Testing the seq_ping() funcion")
+print("-----| Exercise 1 |------")
+print("Testing the seq_ping() funtion")
 seq_ping()

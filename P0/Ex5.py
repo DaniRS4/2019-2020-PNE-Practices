@@ -1,6 +1,6 @@
 from Seq0 import *
 
-FOLDER = "/home/alumnos/dreal/PycharmProjects/2019-2020-PNE-Practices/Session-04 folder/"
+FOLDER = "/Users/DANIEL REAL/PycharmProjects/2019-2020-PNE-Practices/Session-04 folder/"
 
 FILENAME = ['U5', 'ADA', 'FRAT1', 'FXN', 'RNU6_269P']
 print("-----| Exercise 5 |------")
