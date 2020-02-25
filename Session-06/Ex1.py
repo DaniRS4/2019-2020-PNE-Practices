@@ -1,29 +1,30 @@
 class Seq:
     """A class for representing sequence objects"""
     def __init__(self, strbases):
-        self.strbases = strbases
         bases = []
-        for index in strbases:
-            if index == "A" or "C" or "G" or "T":
-                bases.append[index]
+        for i in strbases:
+            if i == "A":
+                bases.append(i)
+            elif i == "C":
+                bases.append(i)
+            elif i == "G":
+                bases.append(i)
+            elif i == "T":
+                bases.append(i)
             else:
                 print("ERROR")
-                break
-    print("".join(bases))
-
+                self.strbases = "ERROR"
+                return
+        print("".join(bases))
+        self.strbases = strbases
 
     def __str__(self):
         return self.strbases
 
-    def len(self):
-        return len(self.strbases)
 
-class Gene(Seq):
-
-    pass
-
-# -- Main Program
+# --- Main program
 s1 = Seq("ACCTGC")
 s2 = Seq("Hello? Am I a valid sequence?")
+
 print(f"Sequence 1: {s1}")
 print(f"Sequence 2: {s2}")
