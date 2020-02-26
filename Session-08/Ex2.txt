@@ -1,0 +1,10 @@
+| Destination IP   | Name (if known)  | Time  |
+|------------------|------------------|-------|
+| 212.128.253.171  | My computer      | 0.056 ms, 0.046 ms, 0.047 ms |
+|  212.128.255.129 | f-l3208-pc01     |                              |
+| 8.8.8.8          | Google           | 3.71 ms, 3.83 ms, 3.71 ms    |
+| 10.3.33.225      | Mobile           | 179 ms, 478 ms, 140 ms       |
+|                  | www.urjc.es      | 2.32 ms, 2.47 ms, 2.29 ms    |
+|                  | github.com       | 36.7 ms, 36.5 ms, 36.6 ms    |
+|                  | wikipedia.org    | 139 ms, 139 ms, 139 ms       |
+|                  | newdomain.com.au | 303 ms, 305 ms, 303 ms       |

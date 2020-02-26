@@ -1,0 +1,5 @@
+Machine      | Interface   | Date         |  Place       |   IP            |
+-------------|-------------|--------------|--------------|-----------------|
+mobile       | Wifi        | 2020-Feb-25  | Alcorcón lab | 10.3.33.225     |
+lap computer | Wire        | 2020-Feb-25  | Alcorcón lab | 212.128.253.171 |
+mobile       | Wifi        | 2020-Feb-26  | home         |                 |
