@@ -1,8 +1,5 @@
 from Seq1 import Seq
 
-sequence = {"ACTGA"}
+seq_1 = Seq("ACTGA")
 
-
-
-print("-----| Exercise 1 |------")
-print({sequence.len()})
+print("Sequence", 1, ": (Length:", seq_1.len(), ")", seq_1)
