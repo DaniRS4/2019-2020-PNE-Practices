@@ -1,6 +1,6 @@
 from Seq1 import Seq
-
-FOLDER = "../Session-04/"
+print("-----| Exercise 9 |------")
+FOLDER = "../Session-04 folder/"
 file_name = FOLDER + "U5.txt"
 s0 = Seq('')
 s0 = s0.read_fasta(file_name)
