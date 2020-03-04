@@ -14,15 +14,6 @@ class Client:
     def __str__(self):
         return f"Connection to SERVER at {self.ip}, PORT: {self.port}"
 
-    def debug_talk(self, msg_to_server):
-        msg_from_server = self.talk(msg_to_server)
-        print("To Server: ", end="")
-        termcolor.cprint(msg_to_server, "blue")
-        print("From Server: ", end="")
-        termcolor.cprint(msg_from_server, "green")
-
-        return msg_from_server
-
     def talk(self, msg):
         """Sent the string (message) to the app running in the given IP and Port"""
 
@@ -43,3 +34,13 @@ class Client:
 
         # Return the response
         return response
+
+    def debug_talk(self, msg_to_server):
+        msg_from_server = self.talk(msg_to_server)
+        print("To Server: ", end="")
+        termcolor.cprint(msg_to_server, "blue")
+        print("From Server: ", end="")
+        termcolor.cprint(msg_from_server, "green")
+
+        return msg_from_server
+
