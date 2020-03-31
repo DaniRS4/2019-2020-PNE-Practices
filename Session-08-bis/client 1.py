@@ -1,7 +1,7 @@
 import socket
 
-IP = "212.128.253.128"
-PORT = 8080
+IP = "212.128.253.172"
+PORT = 8081
 
 # ---We create the socket
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
