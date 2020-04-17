@@ -1,0 +1,31 @@
+[
+  {
+    "Firstname": "Troll",
+    "Lastname": "Face",
+    "age": 20,
+    "phoneNumber": [
+      {"number": "1111", "type": "home"},
+      {"number": "333", "type" : "office"}
+      ]
+    },
+
+    {
+    "Firstname": "Javi",
+    "Lastname": "Martínez",
+    "age": 19,
+    "phoneNumber": [
+      {"number": "458", "type": "movile"},
+      {"number": "333", "type" : "home"}
+    ]
+    },
+
+     {
+    "Firstname": "Manuel",
+    "Lastname": "Smith",
+    "age": 21,
+    "phoneNumber": [
+      {"number": "4578", "type": "Call of Duty"},
+      {"number": "158", "type" : "office"}
+    ]
+    }
+  ]
