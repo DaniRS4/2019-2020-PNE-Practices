@@ -1,12 +1,149 @@
 Test report
 ====================
 
----> listSpecies endpoint
+    ---> listSpecies ENDPOINT
 
 * TEST 1:
 
 * Input:
 
-http://127.0.0.1:8080/listSpecies?limit=2
+http://localhost:8080/listSpecies?limit=15
 
 * output:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>LIST OF SPECIES</title>
+</head>
+<body style="background-color: lightblue;">
+<h2> Species List</h2><p>The total number of species in ensemble is: 267</p>
+<p>Limit: 15</p><p>-Sailfin molly</p><p>-Japanese medaka HSOK</p><p>-Black snub-nosed monkey</p>
+<p>-Golden Hamster</p><p>-Periophthalmus magnuspinnatus</p><p>-Western mosquitofish</p>
+<p>-Eastern happy</p><p>-Golden snub-nosed monkey</p><p>-Great spotted kiwi</p>
+<p>-Donkey</p><p>-Hedgehog</p><p>-Amazon molly</p><p>-Pig - Meishan</p>
+<p>-Abingdon island giant tortoise</p><p>-Drosophila melanogaster</p>
+<a href="/">Main Page</a>
+</body>
+</html>
+
+
+
+* TEST 2:
+
+*Input:
+
+http://localhost:8080/listSpecies?limit=casa
+
+* output:
+
+<!DOCTYPE html>
+    <html lang="en" dir="ltr">
+      <head>
+        <meta charset="utf-8">
+        <title>ERROR</title>
+      </head>
+      <body style="background-color: red;">
+        <h1>ERROR</h1>
+        <p>Resource not available</p>
+      </body>
+    </html>
+
+------------------------------------------------------------------------------------------------------------------------
+
+     ---> karyotype ENDPOINT
+
+* TEST 1:
+
+* Input:
+
+http://localhost:8080/karyotype?specie=MOUSE
+
+* Output:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>KARYOTYPE</title>
+</head>
+<body style="background-color: lightblue;">
+<h2> Karyotype of the species: MOUSE</h2><p>1</p><p>2</p><p>3</p><p>4</p>
+<p>5</p><p>6</p><p>7</p><p>8</p><p>9</p><p>10</p><p>11</p><p>12</p><p>13</p>
+<p>14</p><p>15</p><p>16</p><p>17</p><p>18</p><p>19</p><p>X</p><p>Y</p>
+<p>MT</p><a href="/">Main page</a>
+</body>
+</html>
+
+
+* TEST 2:     ## Here I'm proving json, but it doesn`t work properly.
+
+* Input:
+
+http://localhost:8080/karyotype?specie=MOUSE&json=1
+
+* Output:
+
+{"species": {"MOUSE": {"chromosomes": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12",
+ "13", "14", "15", "16", "17", "18", "19", "X", "Y", "MT"]}}}
+
+
+* TEST 3:
+
+* Input:
+
+http://localhost:8080/karyotype?specie=45
+
+* Output:
+
+<!DOCTYPE html>
+    <html lang="en" dir="ltr">
+      <head>
+        <meta charset="utf-8">
+        <title>ERROR</title>
+      </head>
+      <body style="background-color: red;">
+        <h1>ERROR</h1>
+        <p>Resource not available</p>
+      </body>
+    </html>
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+     ---> chromosomeLength ENDPOINT
+
+
+* TEST 1:
+
+* Input:
+
+http://localhost:8080/chromosomeLength?specie=mouse&chromo=3
+
+* Output:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CHROMOSOME LENGTH</title>
+</head>
+<body style="background-color: lightblue;">
+<h2> Chromosome: 3 Species: mouse</h2><p>The length of the chromosome is:   160039680</p><a href="/">Main page</a>
+</body>
+</html>
+
+
+* TEST 2:
+
+* Input:
+
+http://localhost:8080/chromosomeLength?specie=mouse&chromo=3&json=1
+
+* Output:
+
+{"species": {"mouse": {"Chromosome": {"3": {"The length of the chromosome is:": "160039680"}}}}}
+
+------------------------------------------------------------------------------------------------------------------------
+

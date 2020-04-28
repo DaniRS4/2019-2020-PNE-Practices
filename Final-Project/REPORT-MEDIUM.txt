@@ -1,0 +1,225 @@
+Test report
+====================
+
+    ---> geneSeq ENDPOINT
+
+* TEST 1:
+
+* Input:
+
+http://localhost:8080/geneSeq?gene=FRAT1
+
+* Output:
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>GENE</title>
+</head>
+<body style="background-color: lightblue;">
+<h2>The sequence of the gene FRAT1</h2><textarea readonly rows = 20 cols = 80>CGGCTCCCGCGGCTGCAGGCGC
+GCGGCTAGAGTGCCTGGCGGGCTCCGGCTTCCGCGTCCGCCCCGGCCCCGGTCCAGACTTAGTCTTCAGCTCCGCGCCCGCTCCGCCGCGGCCCACCGCG
+CCCGCCGGCAGCCGAGCCCCCAGCGACGCCCGCACAGCTCCGGGTGCCCAGACAGGGGGCCATGCCGTGCCGGAGGGAGGAGGAAGAGGAAGCCGGCGAG
+GAGGCGGAGGGGGAGGAAGAGGAGGAGGACAGCTTCCTCCTACTGCAGCAGTCAGTGGCGCTGGGCAGCTCGGGCGAGGTGGACCGGCTGGTGGCCCAGA
+TCGGCGAGACGCTGCAGCTGGACGCGGCGCAGCACAGCCCGGCCTCGCCGTGCGGGCCCCCGGGGGCGCCGCTGCGGGCCCCGGGGCCCCTGGCTGCGGC
+GGTGCCGGCGGACAAGGCCAGGTCCCCGGCGGTGCCGCTGCTGCTGCCGCCCGCGTTGGCGGAGACTGTGGGCCCGGCGCCCCCTGGGGTCCTGCGCTGC
+GCCCTGGGGGACCGCGGCCGCGTGCGGGGCCGCGCTGCGCCCTACTGCGTGGCCGAGCTCGCCACAGGCCCCAGCGCGCTGTCCCCACTGCCCCCTCAGG
+CCGACCTTGATGGGCCTCCGGGAGCTGGCAAGCAGGGCATCCCGCAGCCGCTGTCGGGTCCGTGCCGGCGAGGATGGCTCCGGGGCGCCGCCGCCTCCCG
+CCGCCTGCAGCAGCGACGCGGGTCCCAACCAGAAACCCGCACAGGCGACGACGACCCGCACCGGCTTCTGCAGCAGCTAGTGCTCTCTGGAAACCTCATC
+AAGGAGGCCGTGCGAAGGCTTCATTCGCGACGGCTGCAGTTACGTGCAAAGCTTCCCCAACGCCCGCTCCTGGGACCTCTGTCGGCCCCGGTGCATGAAC
+CCCCTTCGCCTCGCAGCCCTCGCGCGGCCTGCAGTGACCCTGGCGCCTCCGGGAGGGCGCAGCTCAGAACTGGCGACGGCGTTCTTGTGCCTGGCAGCTA
+ACACGCCCGGGGTGGCCACAGCGCCAGCCTCAGACTGGAGGGCAAGGGGTTCCCTTGAGGGCTGCAGTTCTACTCAGGCTGGTGGAGAACTCTGGCTTTT
+GGAAGCGAGAGTAAAAAGCTAATGACGAGGAACCGAAAAATCGCGAGTGTTTCGCGGGTAACTGGGGTTGAGGGCCAAAATATTTGGAATGAAGGACTTT
+GGCCCTATTTAAGGCAGATTTTACAGAGCGCACCTCAAACGTACAAGTCAGTAGGACTCCTTATTTGGCGTGACCCGACCTGGCCGCGGAGCCTGCATTT
+CCTCGCAGCCTCTCAGTGCCCTCCAGCCCCGCGACCATGTGGCCACAATCCACGCTTCTCCGGATCGCGGTGCGCCGGAACCACGGAGGATGATGCCAGT
+TACTTGCTTTACCTTTTCAGGGCTGGCTCCTGATCCACTTTGGGGGAGGAGAACATGAGTAGATAATTTCAGGGTGCAGCCCAATCTGCCAGACTTAAAA
+AAACCATCTTGTGTCTTTGGAGGTGCTGCTTAATACCAAACATGCGGTGCCATGAAGGGACCCTTTGGGGGTTGAATAGGAGTTAACCCCTGCGCTCTCT
+TTGCAACTGTCTCTCTTCTCAGAGTGGTGGGGGAAGGCTGTACGACACGGGTGGGGAAAGGAGGTGGGGGCGGGGAGTATTGAATGGTGGTGGAAGGGTA
+GAGAGGCGCGGAGTGAACCCCACGCCCTGTCTAAAGTGTATTTTCAGAGCCGGCCCGCCTCTCCTCGGTTCAAGGTCACTGTTTCCTGGGCACGCACTGG
+GTTGCGGGACAGAGTAGCCAGGTTCTGCCGGTGCTCGGAGAAGAGCGCAGTGTTTTGCAAGTGCTGGAGTCTCCTGAGGACACGCGCGTCGCCGCCACCG
+CGGGTGTGGGAAAGCGCGGACGTGCTGGGCGGCTGTGCTTCGGTAGGCGACCACCGCCCCTGGCCGCGCTCCGGGCTTTCACGGAAACTCCCGAGACCGG
+GCCCTGGGTTCCTCCTCTCCTACTCGGCTCTGCAGTCCTACTCAAGCGGGTGGCTCTGGGATCCTGGGGGCCTGGGTTGGGGGCTAGGGAGACGCCATGT
+GATGGACACTCCAGGGACACACAGCCTAGCACAGCAGCTTATAATGGGCTCTCCGGGGCCATTTGCAATAACAGCTGCAATTCCCTGGATAGACGAGTTG
+ATTTCCTCCCTCTGCCCCTCCCCCAGCCATGCCAGCTGGCCTTTGTAAGTGCAGGAAACCGAGTAGAAAATGTGACCCTCCAAATGGAGAAGCTGCAGGC
+TTTGCCATTGTGAACCATGGTGAAGTGCTTGGAACATACTGTTCACTCACTCTAAAGGCGCTGAGACTGTGCTGTTGTTCTCGTTTTTATAGTCAATGGC
+TTGTTCATCATCCAGATGTGGCTACTGACATATCTACACTTCGCACCGGAGTGTCTGGAATTGTGGCTATCCTGATTATAGGATTTTAACTTAACTGAAA
+TGCCTGCTTTGAATAAATGTGTTGGGTTTTTTGTTTGGTTTTATTTTATACTTGCCATCAGTGAAAAAGATGTACAGAACACATTTCTCTGATCTCCATA
+AACATGAAAACACTTGAAATCTC</textarea><a href="/">Main page</a>
+</body>
+</html>
+
+
+* TEST 2:
+
+* Input:
+
+http://localhost:8080/geneSeq?gene=%26%25%25%25%24%24%26
+
+* Output:
+
+<!DOCTYPE html>
+    <html lang="en" dir="ltr">
+      <head>
+        <meta charset="utf-8">
+        <title>ERROR</title>
+      </head>
+      <body style="background-color: red;">
+        <h1>ERROR</h1>
+        <p>Resource not available</p>
+      </body>
+    </html>
+
+------------------------------------------------------------------------------------------------------------------------
+
+     ---> geneInfo ENDPOINT
+
+* TEST 1:
+
+* Input:
+
+http://localhost:8080/geneInfo?gene=FRAT1
+
+* Output:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>GENE</title>
+</head>
+<body style="background-color: lightblue;">
+<h2>Information about the gene: FRAT1</h2><p>The start: 97319271</p><p>The end: 97321915</p><p>The length of the gene's
+sequence is: 2645</p><p>This gene is located in the chromosome: 10</p><p>The ID of the gene is: ENSG00000165879</p>
+<a href="/">Main page</a>
+</body>
+</html>
+
+
+* TEST 2:
+
+* Input:
+
+http://localhost:8080/geneInfo?gene=FRAT1&json=1
+
+* Output:
+
+{"gene": "FRAT1", "Start": 97319271, "End": 97321915, "Length": 2645, "Chromosome": "10", "ID": "ENSG00000165879"}
+
+------------------------------------------------------------------------------------------------------------------------
+
+     ---> geneCalc ENDPOINT
+
+* TEST 1:
+
+* Input:
+
+http://localhost:8080/geneCalc?gene=FRAT1
+
+* Output:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>GENE</title>
+</head>
+<body style="background-color: lightblue;">
+<h2>Some calculations of the gene: FRAT1</h2><p>The length of the sequence is: 2645</p><p>A : 477 (18.03%)</p>
+<p>C : 799 (30.21%)</p><p>T : 520 (19.66%)</p><p>G : 849 (32.1%)</p>
+
+* TEST 2:
+
+* Input:
+
+http://localhost:8080/geneCalc?gene=DS
+
+* Output:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>GENE</title>
+</head>
+<body style="background-color: lightblue;">
+<h2>Some calculations of the gene: DS</h2><p>The length of the sequence is: 39025</p><p>A : 10356 (26.54%)</p>
+<p>C : 8779 (22.5%)</p><p>T : 10928 (28.0%)</p><p>G : 8962 (22.96%)</p>
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+     ---> geneList ENDPOINT
+
+
+* TEST 1:
+
+* Input:
+
+http://localhost:8080/geneList?chromo=1&start=0&end=30000
+
+* Output:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CHROMOSOME LENGTH</title>
+</head>
+<body style="background-color: lightblue;">
+<h2>The genes in the chromosome 1 that start at 0 and end at 30000 are:</h2> <p>DDX11L1</p>
+<p>WASH7P</p><p>MIR6859-1</p><p>MIR1302-2HG</p><a href="/">Main page</a>
+</body>
+</html>
+
+
+* TEST 2:
+
+* Input:
+
+http://localhost:8080/geneList?chromo=3&start=0&end=30000
+
+* Output:
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CHROMOSOME LENGTH</title>
+</head>
+<body style="background-color: lightblue;">
+<h2>The genes in the chromosome 3 that start at 0 and end at 30000 are:</h2> <p>LINC01986</p><a href="/">Main page</a>
+</body>
+</html>
+
+
+* TEST 3:
+
+* Input:
+
+http://localhost:8080/geneList?chromo=3&start=0&end=30000&json=1
+
+* Output:
+
+{"chromosome": "3", "Start": "0", "End": "30000", "Genes": ["LINC01986"]}
+
+
+* TEST 4:
+
+* Input:
+
+http://localhost:8080/geneList?chromo=SAS&start=0&end=30000
+
+* Output:
+
+<!DOCTYPE html>
+    <html lang="en" dir="ltr">
+      <head>
+        <meta charset="utf-8">
+        <title>ERROR</title>
+      </head>
+      <body style="background-color: red;">
+        <h1>ERROR</h1>
+        <p>Resource not available</p>
+      </body>
+    </html>
