@@ -9,7 +9,7 @@ bases = ["A", "C", "T", "G"]
 FOLDER = "../Session-04 folder/"
 TEXT = ".txt"
 # Define the Server's port
-PORT = 8080
+PORT = 8081
 
 
 
@@ -135,7 +135,6 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
 
 
         # Open the form1.html file
-        # Read the index from th
 
         # Define the content-type header:
         self.send_header('Content-Type', 'text/html')

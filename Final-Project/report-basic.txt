@@ -1,0 +1,12 @@
+Test report
+====================
+
+---> listSpecies endpoint
+
+* TEST 1:
+
+* Input:
+
+http://127.0.0.1:8080/listSpecies?limit=2
+
+* output:
