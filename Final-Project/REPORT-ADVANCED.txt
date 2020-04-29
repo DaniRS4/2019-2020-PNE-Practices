@@ -1,0 +1,12 @@
+Test report
+====================
+
+    ---> geneSeq ENDPOINT
+
+* TEST 1:
+
+* Input:
+
+http://localhost:8080/geneSeq?gene=FRAT1
+
+* Output:

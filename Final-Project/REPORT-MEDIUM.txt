@@ -100,12 +100,22 @@ sequence is: 2645</p><p>This gene is located in the chromosome: 10</p><p>The ID 
 
 * Input:
 
-http://localhost:8080/geneInfo?gene=FRAT1&json=1
+http://localhost:8080/geneInfo?gene=JC
 
 * Output:
 
-{"gene": "FRAT1", "Start": 97319271, "End": 97321915, "Length": 2645, "Chromosome": "10", "ID": "ENSG00000165879"}
 
+<!DOCTYPE html>
+    <html lang="en" dir="ltr">
+      <head>
+        <meta charset="utf-8">
+        <title>ERROR</title>
+      </head>
+      <body style="background-color: red;">
+        <h1>ERROR</h1>
+        <p>Resource not available</p>
+      </body>
+    </html>
 ------------------------------------------------------------------------------------------------------------------------
 
      ---> geneCalc ENDPOINT
@@ -127,6 +137,7 @@ http://localhost:8080/geneCalc?gene=FRAT1
 <body style="background-color: lightblue;">
 <h2>Some calculations of the gene: FRAT1</h2><p>The length of the sequence is: 2645</p><p>A : 477 (18.03%)</p>
 <p>C : 799 (30.21%)</p><p>T : 520 (19.66%)</p><p>G : 849 (32.1%)</p>
+
 
 * TEST 2:
 
@@ -194,17 +205,6 @@ http://localhost:8080/geneList?chromo=3&start=0&end=30000
 
 
 * TEST 3:
-
-* Input:
-
-http://localhost:8080/geneList?chromo=3&start=0&end=30000&json=1
-
-* Output:
-
-{"chromosome": "3", "Start": "0", "End": "30000", "Genes": ["LINC01986"]}
-
-
-* TEST 4:
 
 * Input:
 

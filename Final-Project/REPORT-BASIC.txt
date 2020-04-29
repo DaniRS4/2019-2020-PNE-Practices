@@ -77,19 +77,7 @@ http://localhost:8080/karyotype?specie=MOUSE
 </html>
 
 
-* TEST 2:     ## Here I'm proving json, but it doesn`t work properly.
-
-* Input:
-
-http://localhost:8080/karyotype?specie=MOUSE&json=1
-
-* Output:
-
-{"species": {"MOUSE": {"chromosomes": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12",
- "13", "14", "15", "16", "17", "18", "19", "X", "Y", "MT"]}}}
-
-
-* TEST 3:
+* TEST 2:
 
 * Input:
 
@@ -113,7 +101,6 @@ http://localhost:8080/karyotype?specie=45
 ------------------------------------------------------------------------------------------------------------------------
 
      ---> chromosomeLength ENDPOINT
-
 
 * TEST 1:
 
@@ -139,11 +126,20 @@ http://localhost:8080/chromosomeLength?specie=mouse&chromo=3
 
 * Input:
 
-http://localhost:8080/chromosomeLength?specie=mouse&chromo=3&json=1
+http://localhost:8080/chromosomeLength?specie=mouse&chromo=5
 
 * Output:
 
-{"species": {"mouse": {"Chromosome": {"3": {"The length of the chromosome is:": "160039680"}}}}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CHROMOSOME LENGTH</title>
+</head>
+<body style="background-color: lightblue;">
+<h2> Chromosome: 5 Species: mouse</h2><p>The length of the chromosome is:   151834684</p><a href="/">Main page</a>
+</body>
+</html>
 
 ------------------------------------------------------------------------------------------------------------------------
 
