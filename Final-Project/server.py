@@ -19,15 +19,15 @@ socketserver.TCPServer.allow_reuse_address = True
 seq_args = ''
 
 values_for_params = []
+
+
 # Class with our Handler. It is a called derived from BaseHTTPRequestHandler
 # It means that our class inheritates all his methods and properties
+# Print the request line
 class TestHandler(http.server.BaseHTTPRequestHandler):
 
     def do_GET(self):
-        """This method is called whenever the client invokes the GET method
-        in the HTTP protocol request"""
-
-        # Print the request line
+        """This method is called whenever the client invokes the GET method in the HTTP protocol request"""
         global seq_args
         termcolor.cprint(self.requestline, 'green')
 
@@ -197,7 +197,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                     for e in seq_args:
                         e = e.split('=')
                         values_for_params.append(e[-1])
-                    params = values_for_params[0] + ':' + values_for_params[1] + '-' + values_for_params[2] + '?feature=gene;content-type=application/json'
+                    params = values_for_params[0] + ':' + values_for_params[1] + '-' + values_for_params[2] + '?feature=gene;content-type=application/json '
                     conn.request("GET", endpoint + params)
                     resp1 = conn.getresponse()
                     data_1 = resp1.read().decode("utf-8")
@@ -210,7 +210,8 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                     contents += '<a href="/">Main page</a>'
                     contents += "</body></html>"
                     if 'json=1' in req_line[1]:
-                        dict_json = {'chromosome': values_for_params[0], 'Start': values_for_params[1], 'End': values_for_params[2], 'Genes': gene_in_chromosome}
+                        dict_json = {'chromosome': values_for_params[0], 'Start': values_for_params[1],
+                                     'End': values_for_params[2], 'Genes': gene_in_chromosome}
                         contents = json.dumps(dict_json)
                     self.send_response(200)
                 else:
@@ -263,7 +264,8 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                         api_info_gene = json.loads(data_3)
                         seq0 = Seq(api_info_seq['seq'])
                         if 'json=1' in req_line[1]:
-                            dict_json = {'gene': gene_name, 'Start': api_info_gene['start'], 'End': api_info_gene['end'],
+                            dict_json = {'gene': gene_name, 'Start': api_info_gene['start'],
+                                         'End': api_info_gene['end'],
                                          'Length': seq0.len(), 'Chromosome': api_info_gene['seq_region_name'],
                                          'ID': gene_id}
                             contents = json.dumps(dict_json)
