@@ -18,10 +18,9 @@ socketserver.TCPServer.allow_reuse_address = True
 
 seq_args = ''
 
-
+values_for_params = []
 # Class with our Handler. It is a called derived from BaseHTTPRequestHandler
 # It means that our class inheritates all his methods and properties
-
 class TestHandler(http.server.BaseHTTPRequestHandler):
 
     def do_GET(self):
@@ -97,7 +96,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                             <meta charset="utf-8">
                             <title>LIST OF SPECIES</title>
                         </head>
-                        <body style="background-color: lightblue;">
+                        <body style="background-color: yellow;">
                         """
                         contents += f"<h2> Species List</h2>"
                         contents += f"<p>The total number of species in ensemble is: {len(api_info['species'])}</p>"
@@ -136,7 +135,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                             <meta charset="utf-8">
                             <title>KARYOTYPE</title>
                         </head>
-                        <body style="background-color: lightblue;">
+                        <body style="background-color: yellow;">
                         """
                         contents += f"<h2> Karyotype of the species: {seq_args[-1]}</h2>"
                         for n in karyotype_list:
@@ -174,7 +173,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                             <meta charset="utf-8">
                             <title>CHROMOSOME LENGTH</title>
                         </head>
-                        <body style="background-color: lightblue;">
+                        <body style="background-color: yellow;">
                         """
                         contents += f"<h2> Chromosome: {seq_args[-1]} Species: {args_def[0]}</h2>"
                         contents += f"<p>The length of the chromosome is:   {chromosome_length}</p>"
@@ -185,7 +184,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                     endpoint = '/overlap/region/human/'
                     second_arg = args[1]
                     seq_args = second_arg.split("&")
-                    values_for_params = []
+
                     contents = """
                     <!DOCTYPE html>
                     <html lang="en">
@@ -193,13 +192,12 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                         <meta charset="utf-8">
                         <title>CHROMOSOME LENGTH</title>
                     </head>
-                    <body style="background-color: lightblue;">
+                    <body style="background-color: yellow;">
                     """
                     for e in seq_args:
                         e = e.split('=')
                         values_for_params.append(e[-1])
-                    params = values_for_params[0] + ':' + values_for_params[1] + '-' + values_for_params[
-                        2] + '?feature=gene;content-type=application/json'
+                    params = values_for_params[0] + ':' + values_for_params[1] + '-' + values_for_params[2] + '?feature=gene;content-type=application/json'
                     conn.request("GET", endpoint + params)
                     resp1 = conn.getresponse()
                     data_1 = resp1.read().decode("utf-8")
@@ -243,7 +241,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                         <meta charset="utf-8">
                         <title>GENE</title>
                     </head>
-                    <body style="background-color: lightblue;">
+                    <body style="background-color: yellow;">
                     """
                     if first_arg == "/geneSeq":
                         gene_seq = ''

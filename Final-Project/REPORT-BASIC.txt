@@ -17,7 +17,7 @@ http://localhost:8080/listSpecies?limit=15
     <meta charset="utf-8">
     <title>LIST OF SPECIES</title>
 </head>
-<body style="background-color: lightblue;">
+<body style="background-color: yellow;">
 <h2> Species List</h2><p>The total number of species in ensemble is: 267</p>
 <p>Limit: 15</p><p>-Sailfin molly</p><p>-Japanese medaka HSOK</p><p>-Black snub-nosed monkey</p>
 <p>-Golden Hamster</p><p>-Periophthalmus magnuspinnatus</p><p>-Western mosquitofish</p>
@@ -68,7 +68,7 @@ http://localhost:8080/karyotype?specie=MOUSE
     <meta charset="utf-8">
     <title>KARYOTYPE</title>
 </head>
-<body style="background-color: lightblue;">
+<body style="background-color: yellow;">
 <h2> Karyotype of the species: MOUSE</h2><p>1</p><p>2</p><p>3</p><p>4</p>
 <p>5</p><p>6</p><p>7</p><p>8</p><p>9</p><p>10</p><p>11</p><p>12</p><p>13</p>
 <p>14</p><p>15</p><p>16</p><p>17</p><p>18</p><p>19</p><p>X</p><p>Y</p>
@@ -116,7 +116,7 @@ http://localhost:8080/chromosomeLength?specie=mouse&chromo=3
     <meta charset="utf-8">
     <title>CHROMOSOME LENGTH</title>
 </head>
-<body style="background-color: lightblue;">
+<body style="background-color: yellow;">
 <h2> Chromosome: 3 Species: mouse</h2><p>The length of the chromosome is:   160039680</p><a href="/">Main page</a>
 </body>
 </html>
@@ -136,7 +136,7 @@ http://localhost:8080/chromosomeLength?specie=mouse&chromo=5
     <meta charset="utf-8">
     <title>CHROMOSOME LENGTH</title>
 </head>
-<body style="background-color: lightblue;">
+<body style="background-color: yellow;">
 <h2> Chromosome: 5 Species: mouse</h2><p>The length of the chromosome is:   151834684</p><a href="/">Main page</a>
 </body>
 </html>
