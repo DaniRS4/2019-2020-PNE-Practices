@@ -15,9 +15,7 @@ bases = ['A', 'C', 'T', 'G']
 
 # -- This is for preventing the error: "Port already in use"
 socketserver.TCPServer.allow_reuse_address = True
-
 seq_args = ''
-
 values_for_params = []
 
 
