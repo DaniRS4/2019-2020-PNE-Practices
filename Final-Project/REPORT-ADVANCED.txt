@@ -13,8 +13,25 @@ http://localhost:8080/listSpecies?limit=15&json=1
 
 {"ListSpecies": ["Paramormyrops kingsleyae", "Cow", "Electric eel", "Goldfish",
 "Siamese fighting fish", "Sailfin molly", "Pachon cavefish", "Large yellow croaker",
- "Guinea Pig", "Ring-necked pheasant", "Orangutan", "European seabass", "American beaver",
-  "Mouse NOD/ShiLtJ", "Naked mole-rat male"]}
+"Guinea Pig", "Ring-necked pheasant", "Orangutan", "European seabass", "American beaver",
+"Mouse NOD/ShiLtJ", "Naked mole-rat male"]}
+
+
+* TEST 2:
+
+* Input:
+
+http://localhost:8080/listSpecies?limit=38&json=1
+
+* Output:
+
+{"ListSpecies": ["Pig - Rongchang", "Pika", "African ostrich", "Nile tilapia", "Channel catfish",
+"West African mud turtle", "Channel bull blenny", "Sooty mangabey", "Dolphin", "Naked mole-rat male",
+"Brown trout", "Eastern brown snake", "Mouse CAST/EiJ", "Spiny chromis", "Gorilla", "Silver-eye",
+"Sloth", "Eurasian sparrowhawk", "Mouse AKR/J", "Sailfin molly", "Greater bamboo lemur", "Mangrove rivulus",
+"Platypus", "Live sharksucker", "Megabat", "Mouse NOD/ShiLtJ", "Ferret", "Coelacanth", "Lion",
+"Siamese fighting fish", "Pig - Wuzhishan", "Brazilian guinea pig", "Sheepshead minnow", "Beluga whale",
+"Domestic yak", "Orbiculate cardinalfish", "Chinese hamster CHOK1GS", "Kakapo"]}
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -31,6 +48,19 @@ http://localhost:8080/karyotype?specie=cow&json=1
 {"species": {"cow": {"chromosomes": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14",
  "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "X", "MT"]}}}
 
+
+* TEST 2:
+
+* Input:
+
+http://localhost:8080/karyotype?specie=dog&json=1
+
+* Output:
+
+{"species": {"dog": {"chromosomes": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14",
+"15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33",
+"34", "35", "36", "37", "38", "X", "MT"]}}}
+
 ------------------------------------------------------------------------------------------------------------------------
 
      ---> chromosomeLength ENDPOINT
@@ -44,6 +74,28 @@ http://localhost:8080/chromosomeLength?specie=dog&chromo=7&json=1
 * Output:
 
 {"species": {"dog": {"Chromosome": {"7": {"The length of the chromosome is:": "80974532"}}}}}
+
+
+* TEST 2:
+
+* Input:
+
+http://localhost:8080/chromosomeLength?specie=bird&chromo=3&json=1
+
+* Output:
+
+<!DOCTYPE html>
+    <html lang="en" dir="ltr">
+      <head>
+        <meta charset="utf-8">
+        <title>ERROR</title>
+      </head>
+      <body style="background-color: red;">
+        <h1>ERROR</h1>
+        <p>Resource not available</p>
+      </body>
+    </html>
+
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -84,6 +136,8 @@ TTTGCCATTGTGAACCATGGTGAAGTGCTTGGAACATACTGTTCACTCACTCTAAAGGCGCTGAGACTGTGCTGTTGTTC
 TTGTTCATCATCCAGATGTGGCTACTGACATATCTACACTTCGCACCGGAGTGTCTGGAATTGTGGCTATCCTGATTATAGGATTTTAACTTAACTGAAA
 TGCCTGCTTTGAATAAATGTGTTGGGTTTTTTGTTTGGTTTTATTTTATACTTGCCATCAGTGAAAAAGATGTACAGAACACATTTCTCTGATCTCCATA
 AACATGAAAACACTTGAAATCTC"}}}
+
+
 ------------------------------------------------------------------------------------------------------------------------
 
      ---> geneInfo ENDPOINT
@@ -98,6 +152,18 @@ http://localhost:8080/geneInfo?gene=FRAT1&json=1
 
 {"gene": "FRAT1", "Start": 97319271, "End": 97321915, "Length": 2645, "Chromosome": "10", "ID": "ENSG00000165879"}
 
+
+* TEST 2:
+
+* Input:
+
+http://localhost:8080/geneInfo?gene=4&json=1
+
+* Output:
+
+{"gene": "4", "Start": 184242301, "End": 184249548, "Length": 7248, "Chromosome": "3", "ID": "ENSG00000214160"}
+
+
 ------------------------------------------------------------------------------------------------------------------------
 
      ---> geneCalc ENDPOINT
@@ -111,7 +177,19 @@ http://localhost:8080/geneCalc?gene=DS&json=1
 * Output:
 
 {"Gene": "DS", "Length": 39025, "A": {"10356": {"Percentage": 26.54}}, "C": {"8779": {"Percentage": 22.5}},
- "T": {"10928": {"Percentage": 28.0}}, "G": {"8962": {"Percentage": 22.96}}}
+"T": {"10928": {"Percentage": 28.0}}, "G": {"8962": {"Percentage": 22.96}}}
+
+
+* TEST 2:
+
+* Input:
+
+http://localhost:8080/geneCalc?gene=4&json=1
+
+* Output:
+
+{"Gene": "4", "Length": 7248, "A": {"1736": {"Percentage": 23.95}}, "C": {"1780": {"Percentage": 24.56}},
+"T": {"1786": {"Percentage": 24.64}}, "G": {"1946": {"Percentage": 26.85}}}
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -126,8 +204,8 @@ http://localhost:8080/geneList?chromo=X&start=0&end=3000000&json=1
 * Output:
 
 {"chromosome": "X", "Start": "0", "End": "3000000", "Genes": ["AL954722.1", "PLCXD1", "GTPBP6", "LINC00685",
- "PPP2R3B", "AL732314.8", "AL732314.1", "AL732314.6", "FABP5P13", "KRT18P53", "SHOX", "AL672277.1", "RPL14P5",
-  "CRLF2", "CSF2RA", "MIR3690", "RNA5SP498", "IL3RA", "SLC25A6", "LINC00106", "ASMTL-AS1", "ASMTL", "P2RY8",
-   "AKAP17A", "ASMT", "AL683807.1", "AL683807.2", "DHRSX", "DHRSX-IT1", "ZBED1", "MIR6089", "CD99P1",
-    "LINC00102", "CD99", "XG", "GYG2", "GYG2-AS1", "ARSD", "ARSD-AS1", "ARSL"]}
+"PPP2R3B", "AL732314.8", "AL732314.1", "AL732314.6", "FABP5P13", "KRT18P53", "SHOX", "AL672277.1", "RPL14P5",
+"CRLF2", "CSF2RA", "MIR3690", "RNA5SP498", "IL3RA", "SLC25A6", "LINC00106", "ASMTL-AS1", "ASMTL", "P2RY8",
+"AKAP17A", "ASMT", "AL683807.1", "AL683807.2", "DHRSX", "DHRSX-IT1", "ZBED1", "MIR6089", "CD99P1",
+"LINC00102", "CD99", "XG", "GYG2", "GYG2-AS1", "ARSD", "ARSD-AS1", "ARSL"]}
 
